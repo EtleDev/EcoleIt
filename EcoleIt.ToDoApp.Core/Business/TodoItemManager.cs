@@ -4,7 +4,7 @@ using EcoleIt.ToDoApp.Core.Outputs;
 
 namespace EcoleIt.ToDoApp.Core.Business
 {
-    internal class TodoItemManager : ITodoItemManager
+    public class TodoItemManager : ITodoItemManager
     {
         private readonly ITodoItemRepository _repository;
 

@@ -10,4 +10,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EcoleIt.ToDoApp.Core\EcoleIt.ToDoApp.Core.csproj" />
+    <ProjectReference Include="..\EcoleIt.ToDoApp.FakeDatabase\EcoleIt.ToDoApp.FakeDatabase.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EcoleIt.ToDoApp.Gui", "Ecol
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoleIt.ToDoApp.Api", "EcoleIt.ToDoApp.Api\EcoleIt.ToDoApp.Api.csproj", "{2E660DCC-D5B5-456C-9E4B-DDB232766CDF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoleIt.ToDoApp.Core", "EcoleIt.ToDoApp.Core\EcoleIt.ToDoApp.Core.csproj", "{2AA443F9-1436-4DDE-B669-36F1B6C4EE0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoleIt.ToDoApp.FakeDatabase", "EcoleIt.ToDoApp.FakeDatabase\EcoleIt.ToDoApp.FakeDatabase.csproj", "{F40C1666-10B4-4C85-8723-9A31D7065C3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{2E660DCC-D5B5-456C-9E4B-DDB232766CDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E660DCC-D5B5-456C-9E4B-DDB232766CDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E660DCC-D5B5-456C-9E4B-DDB232766CDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AA443F9-1436-4DDE-B669-36F1B6C4EE0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AA443F9-1436-4DDE-B669-36F1B6C4EE0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AA443F9-1436-4DDE-B669-36F1B6C4EE0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AA443F9-1436-4DDE-B669-36F1B6C4EE0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F40C1666-10B4-4C85-8723-9A31D7065C3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F40C1666-10B4-4C85-8723-9A31D7065C3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F40C1666-10B4-4C85-8723-9A31D7065C3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F40C1666-10B4-4C85-8723-9A31D7065C3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
