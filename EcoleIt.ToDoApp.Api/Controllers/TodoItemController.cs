@@ -13,10 +13,7 @@ namespace EcoleIt.ToDoApp.Api.Controllers
 
         // GET: api/<TodoItemController>
         [HttpGet]
-        public IEnumerable<TodoItem> Get()
-        {
-            return _db.GetTodoList();
-        }
+        public ActionResult<IEnumerable<TodoItem>> Get() => Ok(_db.GetTodoList());
 
         // GET api/<TodoItemController>/5
         [HttpGet("{id}")]
