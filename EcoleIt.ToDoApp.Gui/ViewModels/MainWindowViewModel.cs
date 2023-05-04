@@ -1,4 +1,4 @@
-﻿using EcoleIt.ToDoApp.Gui.Models;
+﻿using EcoleIt.ToDoApp.Core.Models;
 using EcoleIt.ToDoApp.Gui.Services;
 using ReactiveUI;
 using System.Reactive.Linq;
@@ -10,9 +10,9 @@ namespace EcoleIt.ToDoApp.Gui.ViewModels
     {
         private ViewModelBase content;
 
-        public MainWindowViewModel(Database db)
+        public MainWindowViewModel(TodoItemApiProxy proxy)
         {
-            Content = List = new TodoListViewModel(db.GetItems());
+            Content = List = new TodoListViewModel(proxy.GetItems());
         }
 
         public ViewModelBase Content

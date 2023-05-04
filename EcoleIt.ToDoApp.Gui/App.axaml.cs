@@ -20,11 +20,11 @@ namespace EcoleIt.ToDoApp.Gui
 
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
-                var db = new Database();
+                var proxy = new TodoItemApiProxy();
 
                 desktop.MainWindow = new MainWindow
                 {
-                    DataContext = new MainWindowViewModel(db),
+                    DataContext = new MainWindowViewModel(proxy),
                 };
             }
         }

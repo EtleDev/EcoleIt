@@ -1,4 +1,4 @@
-﻿using EcoleIt.ToDoApp.Gui.Models;
+﻿using EcoleIt.ToDoApp.Core.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 

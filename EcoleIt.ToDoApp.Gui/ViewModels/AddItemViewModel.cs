@@ -1,4 +1,4 @@
-﻿using EcoleIt.ToDoApp.Gui.Models;
+﻿using EcoleIt.ToDoApp.Core.Models;
 using ReactiveUI;
 using System.Reactive;
 
