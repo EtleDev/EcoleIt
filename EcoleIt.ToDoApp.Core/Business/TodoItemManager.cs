@@ -16,8 +16,16 @@ namespace EcoleIt.ToDoApp.Core.Business
         public void Add(TodoItem item)
         {
             var items = _repository.GetAll();
-            var maxId = items.Max(x => x.Id);
-            item.Id = maxId + 1;
+            if (items != null && items.Any())
+            {
+                var maxId = items.Max(x => x.Id);
+                item.Id = maxId + 1;
+            }
+            else
+            {
+                item.Id = 1;
+            }
+            
             _repository.Add(item);
         }
 

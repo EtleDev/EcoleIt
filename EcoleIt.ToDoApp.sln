@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoleIt.ToDoApp.Core", "Eco
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoleIt.ToDoApp.FakeDatabase", "EcoleIt.ToDoApp.FakeDatabase\EcoleIt.ToDoApp.FakeDatabase.csproj", "{F40C1666-10B4-4C85-8723-9A31D7065C3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoleIt.ToDoApp.Sqlite", "EcoleIt.ToDoApp.Sqlite\EcoleIt.ToDoApp.Sqlite.csproj", "{C522CB13-4741-4417-AC57-9488F5AEBA24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F40C1666-10B4-4C85-8723-9A31D7065C3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F40C1666-10B4-4C85-8723-9A31D7065C3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F40C1666-10B4-4C85-8723-9A31D7065C3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C522CB13-4741-4417-AC57-9488F5AEBA24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C522CB13-4741-4417-AC57-9488F5AEBA24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C522CB13-4741-4417-AC57-9488F5AEBA24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C522CB13-4741-4417-AC57-9488F5AEBA24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

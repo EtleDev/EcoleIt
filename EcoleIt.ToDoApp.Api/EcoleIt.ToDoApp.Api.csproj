@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\EcoleIt.ToDoApp.Core\EcoleIt.ToDoApp.Core.csproj" />
     <ProjectReference Include="..\EcoleIt.ToDoApp.FakeDatabase\EcoleIt.ToDoApp.FakeDatabase.csproj" />
+    <ProjectReference Include="..\EcoleIt.ToDoApp.Sqlite\EcoleIt.ToDoApp.Sqlite.csproj" />
   </ItemGroup>
 
 </Project>
