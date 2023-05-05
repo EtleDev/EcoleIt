@@ -10,6 +10,12 @@ namespace EcoleIt.ToDoApp.FakeDatabase
             new TodoItem { Id = 2, Title = "Jouer avec l'architecture", Description="Faire d'autres  trucs avec les élèves"},
             new TodoItem { Id = 3, Title = "Voir les notions de bases de l'API", Description="Rien", IsDone=true},
         };
+
+        public void Add(TodoItem item)
+        {
+            todoList.Add(item);
+        }
+
         public TodoItem Get(int id) => todoList.SingleOrDefault(x => x.Id == id);
 
         public IEnumerable<TodoItem> GetAll() => todoList;

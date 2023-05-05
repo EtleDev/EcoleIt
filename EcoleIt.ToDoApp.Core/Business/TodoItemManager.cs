@@ -1,6 +1,7 @@
 ﻿using EcoleIt.ToDoApp.Core.Inputs;
 using EcoleIt.ToDoApp.Core.Models;
 using EcoleIt.ToDoApp.Core.Outputs;
+using System.Linq;
 
 namespace EcoleIt.ToDoApp.Core.Business
 {
@@ -14,7 +15,10 @@ namespace EcoleIt.ToDoApp.Core.Business
         }
         public void Add(TodoItem item)
         {
-            throw new NotImplementedException();
+            var items = _repository.GetAll();
+            var maxId = items.Max(x => x.Id);
+            item.Id = maxId + 1;
+            _repository.Add(item);
         }
 
         public void ChangeDescription(string description, int id)

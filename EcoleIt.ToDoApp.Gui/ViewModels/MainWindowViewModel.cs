@@ -9,10 +9,12 @@ namespace EcoleIt.ToDoApp.Gui.ViewModels
     public class MainWindowViewModel : ViewModelBase
     {
         private ViewModelBase content;
+        private readonly TodoItemApiProxy _proxy;
 
         public MainWindowViewModel(TodoItemApiProxy proxy)
         {
-            Content = List = new TodoListViewModel(proxy.GetItems());
+            _proxy = proxy;
+            Content = new TodoListViewModel(_proxy.GetItems());
         }
 
         public ViewModelBase Content
@@ -20,8 +22,6 @@ namespace EcoleIt.ToDoApp.Gui.ViewModels
             get => content;
             private set => this.RaiseAndSetIfChanged(ref content, value);
         }
-
-        public TodoListViewModel List { get; }
 
         public void AddItem()
         {
@@ -36,9 +36,9 @@ namespace EcoleIt.ToDoApp.Gui.ViewModels
                 {
                     if (model != null)
                     {
-                        List.Items.Add(model);
+                        _proxy.AddItem(model);
                     }
-                    Content = List;
+                    Content = new TodoListViewModel(_proxy.GetItems());
                 });
 
             Content = vm;

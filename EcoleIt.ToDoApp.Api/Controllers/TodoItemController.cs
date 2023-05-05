@@ -30,12 +30,12 @@ namespace EcoleIt.ToDoApp.Api.Controllers
             return Ok(item);
         }
 
-        //// POST api/<TodoItemController>
-        //[HttpPost(Name = "Add item")]
-        //public void Add([FromBody] TodoItem item)
-        //{
-        //    _db.GetTodoList().Add(item);
-        //}
+        [HttpPost(Name = "Add item")]
+        public IActionResult Add([FromBody] TodoItem item)
+        {
+            mgr.Add(item);
+            return Ok();
+        }
 
         //// PUT api/<TodoItemController>/5
         //[HttpPut("{id}")]

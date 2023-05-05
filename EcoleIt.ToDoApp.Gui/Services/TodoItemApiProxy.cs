@@ -1,11 +1,10 @@
 ﻿using EcoleIt.ToDoApp.Core.Models;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net.Http.Json;
+using System.Text.Json;
 
 namespace EcoleIt.ToDoApp.Gui.Services
 {
@@ -22,19 +21,26 @@ namespace EcoleIt.ToDoApp.Gui.Services
         {
             var request = new HttpRequestMessage(HttpMethod.Get, "api/TodoItem");
             var response = _httpClient.Send(request);
-            if (response != null && !response.IsSuccessStatusCode)
+            if (response != null && response.IsSuccessStatusCode)
             {
-                var items = JsonConvert.DeserializeObject<IEnumerable<TodoItem>>(response.Content.ReadAsStringAsync().Result);
+                var content = response.Content.ReadAsStringAsync().Result;
+                var items = JsonSerializer.Deserialize<IEnumerable<TodoItem>>(content, 
+                    new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
                 return items;
             }
             return Enumerable.Empty<TodoItem>();
         }
-        //    => new[]
-        //{
-        //    new TodoItem { Description = "Walk the dog" },
-        //    new TodoItem { Description = "Buy some milk" },
-        //    new TodoItem { Description = "Learn Avalonia", IsDone = true },
 
-        //};
+        public void AddItem(TodoItem item)
+        {
+            if (item != null)
+            {
+                //var test = JsonSerializer.Serialize<TodoItem>(item);
+                //var resp = _httpClient.PostAsync("api/TodoItem", new StringContent(test, Encoding.UTF8, "application/json")).Result;
+                var response = _httpClient.PostAsJsonAsync("api/TodoItem", item).Result;
+                var req = response.RequestMessage.Content.ReadAsStringAsync().Result;
+                //response.EnsureSuccessStatusCode();
+            }
+        }
     }
 }
